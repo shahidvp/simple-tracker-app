@@ -1,0 +1,322 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  background-color: #f4f7fc;
+}
+
+body {
+  background-color: #f4f7fc; /* Light background for a clean look */
+  color: #333; /* Dark text for readability */
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+#root {
+  width: 100%;
+  /*max-width: 1280px;*/
+  margin: 0 auto;
+  /*padding: 2rem;*/
+  background-color: #ffffff; /* White background for the main container */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.main-container {
+  /*max-width: 1200px;*/
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Auth Container Styles */
+.auth-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-container h1 {
+  color: #2c3e50; /* Darker, more professional title color */
+  margin-bottom: 1.5rem;
+}
+
+.auth-container .error-message {
+  color: #c0392b; /* Red for error messages */
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-container .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.auth-container label {
+  font-weight: bold;
+  color: #34495e; /* Darker label color */
+}
+
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+  padding: 1rem;
+  border: 1px solid #bdc3c7; /* Light grey border */
+  border-radius: 6px; /* Slightly more rounded input fields */
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.auth-container button[type="submit"] {
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db; /* Brighter blue for submit button */
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.auth-container button[type="button"] {
+  background-color: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.auth-container button[type="button"]:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Task Tracker Container Styles */
+.task-tracker-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.task-tracker-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.task-tracker-container h1 {
+  color: #2c3e50; /* Darker, more professional title color */
+  margin-bottom: 0;
+}
+
+.task-tracker-container .add-task-button {
+  background-color: #27ae60; /* Green for add button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-tracker-container .add-task-button:hover {
+  background-color: #219653; /* Darker green on hover */
+}
+
+/* Add Task Form Styles (Revised - Let's be more explicit) */
+.add-task-form {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px #00000014;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center; /* Center the content horizontally within the form */
+}
+
+.add-task-form h3 {
+  color: #34495e;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 50%; /* Reduce width of the heading if desired */
+}
+
+.add-task-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 50%; /* Reduce width of the input groups */
+}
+
+.add-task-form label {
+  font-weight: 700;
+  color: #34495e;
+  display: block;
+  width: 100%; /* Make label take full width of its container */
+}
+
+.add-task-form input[type=text],
+.add-task-form input[type=number],
+.add-task-form input[type=date],
+.add-task-form input[type=datetime-local],
+.add-task-form input[type=time],
+.add-task-form select{
+  padding: 1rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #2c3e50; /* Black text */
+  background-color: #fff; /* White background */
+  width: 100%; /* Make input take full width of its reduced container */
+}
+
+.add-task-form .save-task-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  margin-top: 1rem;
+  width: 50%; /* Reduce width of the save button */
+}
+
+.add-task-form .save-task-button:hover {
+  background-color: #2980b9;
+}
+
+/* Task List Styles */
+.task-list {
+  margin-top: 1rem;
+}
+
+.task-list h2 {
+  color: #2c3e50; /* Darker task list title */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.task-list .no-tasks {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+.task-list .task-item {
+  background-color: #ffffff;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.task-list .task-item h3 {
+  color: #34495e;
+  margin-bottom: 0.75rem;
+}
+
+.task-list .task-item p {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.task-list .task-item strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.task-list .task-item hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.task-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.wide-column {
+  min-width: 200px;
+  max-width: 300px;
+  word-break: break-word;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 1600px) {
+  .main-container {
+    max-width: 1800px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .task-item {
+    padding: 0.75rem;
+  }
+
+  .task-tracker-container header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
